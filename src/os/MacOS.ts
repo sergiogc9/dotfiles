@@ -30,10 +30,10 @@ class MacOS {
 		await CommandLine.execute('defaults write -g AppleShowAllExtensions -bool true');
 
 		// Set list view as preferred Finder view
-		await CommandLine.execute('defaults write com.apple.finder FXPreferredViewStyle -string', ['Nlsv']);
+		await CommandLine.execute("defaults write com.apple.finder FXPreferredViewStyle -string 'Nlsv'");
 
 		// Search the current folder by default
-		await CommandLine.execute('defaults write com.apple.finder FXDefaultSearchScope -string', ['SCcf']);
+		await CommandLine.execute("defaults write com.apple.finder FXDefaultSearchScope -string 'SCcf'");
 
 		// Remove all apps from dock
 		if (!Config.get('already_executed')) await CommandLine.execute('defaults write com.apple.dock persistent-apps -array');
@@ -43,7 +43,7 @@ class MacOS {
 		await CommandLine.execute('defaults write com.apple.dock wvous-br-modifier -int 0');
 
 		// Update clock to show current date and current day of the week and 24h format
-		await CommandLine.execute('defaults write com.apple.menuextra.clock DateFormat', ['EEE MMM d H:mm a']);
+		await CommandLine.execute("defaults write com.apple.menuextra.clock DateFormat 'EEE MMM d H:mm a'");
 
 		// Show Finder status bar
 		await CommandLine.execute('defaults write com.apple.finder ShowStatusBar -bool true');
@@ -61,7 +61,7 @@ class MacOS {
 		await CommandLine.execute('defaults write com.apple.screencapture location ~/Downloads');
 
 		// dark mode
-		await CommandLine.execute('defaults write', ['Apple Global Domain', 'AppleInterfaceStyle', 'Dark']);
+		await CommandLine.execute("defaults write 'Apple Global Domain' 'AppleInterfaceStyle' 'Dark'");
 
 		// stop itunes to autorun when a device is connected
 		await CommandLine.execute('defaults write com.apple.iTunesHelper ignore-devices 1');

@@ -8,9 +8,11 @@ class Apps {
 
 	public run = async () => {
 		console.log('Installing Applications');
+		await CommandLine.logAndExecute('brew update');
 		await this.__installDependencies();
 		await this.__installCommonApps();
 		await this.__installOptionalApps();
+		await CommandLine.logAndExecute('brew cask upgrade');
 	};
 
 	private __installDependencies = async () => {
@@ -65,7 +67,8 @@ class Apps {
 			{ id: 'mongodb-compass', name: 'MongoDB Compass', type: 'brew-cask' },
 			{ id: 'postman', name: 'Postman', type: 'brew-cask' },
 			{ id: 'nucleo', name: 'Nucleo', type: 'brew-cask' },
-			{ id: 'raindropio', name: 'Raindrop', type: 'brew-cask' }
+			{ id: 'raindropio', name: 'Raindrop', type: 'brew-cask' },
+			{ id: '1431085284', name: 'Nimbus Note', type: 'app-store' }
 		];
 
 		for (const app of apps) {
@@ -83,11 +86,27 @@ class Apps {
 	};
 
 	private __installBrewPackage = async (pkg: string) => {
-		await CommandLine.logAndExecute(`brew install ${pkg}`);
+		const checkInstalledOutput = await CommandLine.executeHidden(`brew list -1 | grep "${pkg}" || echo 'not_found'`);
+		if (checkInstalledOutput.match(`^${pkg}`)) {
+			const checkOutdated = await CommandLine.executeHidden(`brew outdated | grep "${pkg}" || echo 'up_to_date'`);
+			if (checkOutdated.match(/^up_to_date/)) console.log(`${pkg} already installed with latest version.`);
+			else {
+				console.log(`${pkg} already installed. Update available.`);
+				await CommandLine.logAndExecute(`brew upgrade ${pkg}`);
+			}
+		} else await CommandLine.logAndExecute(`brew install ${pkg}`);
 	};
 
 	private __installBrewCaskPackage = async (pkg: string) => {
-		await CommandLine.logAndExecute(`brew cask install ${pkg}`);
+		const checkInstalledOutput = await CommandLine.executeHidden(`brew list --cask -1 | grep "${pkg}" || echo 'not_found'`);
+		if (checkInstalledOutput.match(`^${pkg}`)) {
+			const checkOutdated = await CommandLine.executeHidden(`brew outdated --cask | grep "${pkg}" || echo 'up_to_date'`);
+			if (checkOutdated.match(/^up_to_date/)) console.log(`${pkg} already installed with latest version.`);
+			else {
+				console.log(`${pkg} already installed. Update available.`);
+				await CommandLine.logAndExecute(`brew cask upgrade ${pkg}`);
+			}
+		} else await CommandLine.logAndExecute(`brew cask install ${pkg}`);
 	};
 
 	private __installMacOSApp = async (name: string, appId: string) => {

@@ -38,10 +38,10 @@ class Backup {
 		if (!fs.existsSync(`${HOME_MACKUP_FOLDER}/Library`)) {
 			const url = await this.__getConfigDropboxUrl();
 			console.log('Downloading last config from Dropbox...');
-			await CommandLine.execute(`wget -O backup.zip ${url}`, [], { cwd: HOME_DOTFILES_FOLDER });
-			await CommandLine.execute('rm -rf ./Mackup', [], { cwd: HOME_DOTFILES_FOLDER });
-			await CommandLine.execute('unzip backup.zip', [], { cwd: HOME_DOTFILES_FOLDER });
-			await CommandLine.execute('rm backup.zip', [], { cwd: HOME_DOTFILES_FOLDER });
+			await CommandLine.execute(`wget -O backup.zip ${url}`, { cwd: HOME_DOTFILES_FOLDER });
+			await CommandLine.execute('rm -rf ./Mackup', { cwd: HOME_DOTFILES_FOLDER });
+			await CommandLine.execute('unzip backup.zip', { cwd: HOME_DOTFILES_FOLDER });
+			await CommandLine.execute('rm backup.zip', { cwd: HOME_DOTFILES_FOLDER });
 		}
 		console.log(`Restoring application config from ${HOME_DOTFILES_FOLDER}`);
 		await CommandLine.execute('mackup restore -v');
@@ -51,7 +51,7 @@ class Backup {
 	private __getConfigDropboxUrl = async () => {
 		if (!fs.existsSync(path.join(__dirname, '/files/config_dropbox_url.txt'))) {
 			const { pwd } = await inquirer.prompt([{ type: 'password', name: 'pwd', message: 'Enter the password to download the config from Facebook' }]);
-			await CommandLine.execute(`unzip -P ${pwd} config_dropbox_url.zip`, [], { cwd: path.join(__dirname, '/files/') });
+			await CommandLine.execute(`unzip -P ${pwd} config_dropbox_url.zip`, { cwd: path.join(__dirname, '/files/') });
 		}
 		const url = await fsPromise.readFile(path.join(__dirname, '/files/config_dropbox_url.txt'), 'utf8');
 		return url;
@@ -79,7 +79,7 @@ class Backup {
 	};
 
 	private __copyFile = async (filePath: string, destination: string) => {
-		await CommandLine.execute(`cp ${filePath} ${destination}`, []);
+		await CommandLine.execute(`cp ${filePath} ${destination}`);
 	};
 
 	private __copyFileIfExists = async (filePath: string, destination: string) => {
@@ -87,7 +87,7 @@ class Backup {
 	};
 
 	private __copyFolder = async (folderPath: string, destination: string) => {
-		await CommandLine.execute(`cp -r ${folderPath} ${destination}`, []);
+		await CommandLine.execute(`cp -r ${folderPath} ${destination}`);
 	};
 
 }
