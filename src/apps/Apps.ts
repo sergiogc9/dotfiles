@@ -20,6 +20,7 @@ class Apps {
 		await this.__installMultipleBrewPackages([
 			'mas',
 			'mackup',
+			'yarn',
 			'wget'
 		]);
 		await this.__installMultipleBrewCaskPackages([
