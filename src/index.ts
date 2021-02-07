@@ -26,7 +26,7 @@ import Backup from './backup/Backup';
 	console.log(`
 Finished! More options:
 
-- Run dotfiles: npm start
-- Restore / backup your apps config: npm run apps-config
+- Run dotfiles: yarn start
+- Restore / backup your apps config: yarn apps-config
 `);
 })();
