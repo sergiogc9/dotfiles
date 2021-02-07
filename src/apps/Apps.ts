@@ -64,7 +64,7 @@ class Apps {
 			{ id: '1176074088', name: 'Termius', type: 'app-store' },
 			{ id: 'copyclip', name: 'Copy Clip 2', type: 'brew-cask' },
 			{ id: 'cyberduck', name: 'Cyberduck', type: 'brew-cask' },
-			{ id: 'gitkraken', name: 'Gitkraken', type: 'brew-cask' },
+			{ id: 'sourcetree', name: 'Sourcetree', type: 'brew-cask' },
 			{ id: 'mongodb-compass', name: 'MongoDB Compass', type: 'brew-cask' },
 			{ id: 'postman', name: 'Postman', type: 'brew-cask' },
 			{ id: 'nucleo', name: 'Nucleo', type: 'brew-cask' },
