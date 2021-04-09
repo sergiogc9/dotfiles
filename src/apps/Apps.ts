@@ -62,7 +62,6 @@ class Apps {
 			{ id: 'tripmode', name: 'Tripmode', type: 'brew-cask' },
 			{ id: '1147396723', name: 'Whatsapp Desktop', type: 'app-store' },
 			{ id: '1176074088', name: 'Termius', type: 'app-store' },
-			{ id: 'copyclip', name: 'Copy Clip 2', type: 'brew-cask' },
 			{ id: 'cyberduck', name: 'Cyberduck', type: 'brew-cask' },
 			{ id: 'sourcetree', name: 'Sourcetree', type: 'brew-cask' },
 			{ id: 'mongodb-compass', name: 'MongoDB Compass', type: 'brew-cask' },
