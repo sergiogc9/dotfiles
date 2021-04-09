@@ -12,7 +12,9 @@ class Apps {
 		await this.__installDependencies();
 		await this.__installCommonApps();
 		await this.__installOptionalApps();
-		await CommandLine.logAndExecute('brew cask upgrade');
+		await this.__installNPMPackages();
+		await CommandLine.logAndExecute('brew upgrade');
+		await CommandLine.logAndExecute('brew upgrade --cask');
 	};
 
 	private __installDependencies = async () => {
@@ -87,6 +89,23 @@ class Apps {
 		}
 	};
 
+	private __installNPMPackages = async () => {
+		console.log('Installing NPM packages');
+
+		const packages: string[] = [
+			'fox-awesome-cli'
+		];
+
+		for (const pkg of packages) {
+			await this.__installNPMPackage(pkg);
+		}
+	};
+
+	private __installNPMPackage = async (pkg: string) => {
+		console.log(`Installing NPM package: ${pkg}`);
+		await CommandLine.logAndExecute(`npm install -g ${pkg}`);
+	};
+
 	private __installBrewPackage = async (pkg: string) => {
 		const checkInstalledOutput = await CommandLine.executeHidden(`brew list -1 | grep "${pkg}" || echo 'not_found'`);
 		if (checkInstalledOutput.match(`^${pkg}`)) {
@@ -106,9 +125,9 @@ class Apps {
 			if (checkOutdated.match(/^up_to_date/)) console.log(`${pkg} already installed with latest version.`);
 			else {
 				console.log(`${pkg} already installed. Update available.`);
-				await CommandLine.logAndExecute(`brew cask upgrade ${pkg}`);
+				await CommandLine.logAndExecute(`brew upgrade --cask ${pkg}`);
 			}
-		} else await CommandLine.logAndExecute(`brew cask install ${pkg}`);
+		} else await CommandLine.logAndExecute(`brew install --cask ${pkg}`);
 	};
 
 	private __installMacOSApp = async (name: string, appId: string) => {

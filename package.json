@@ -4,9 +4,9 @@
   "description": "A dotfiles init config for Mac OS by Sergio G Cosgaya",
   "main": "dist",
   "dependencies": {
-    "@types/lodash": "4.14.161",
+    "@types/lodash": "4.14.168",
     "eslint": "7.7.0",
-    "lodash": "4.17.20",
+    "lodash": "4.17.21",
     "node-ts": "5.0.8"
   },
   "devDependencies": {
