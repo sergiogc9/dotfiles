@@ -69,7 +69,9 @@ class Apps {
 			{ id: 'postman', name: 'Postman', type: 'brew-cask' },
 			{ id: 'nucleo', name: 'Nucleo', type: 'brew-cask' },
 			{ id: 'raindropio', name: 'Raindrop', type: 'brew-cask' },
-			{ id: '1431085284', name: 'Nimbus Note', type: 'app-store' }
+			{ id: '1431085284', name: 'Nimbus Note', type: 'app-store' },
+			{ id: 'firefox', name: 'Firefox', type: 'brew-cask' },
+			{ id: '1clipboard', name: '1Clipboard', type: 'brew-cask' }
 		];
 
 		for (const app of apps) {
