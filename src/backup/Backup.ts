@@ -60,7 +60,6 @@ class Backup {
 	private __backupConfig = async () => {
 		console.log(`Saving applications config backup in ${HOME_DOTFILES_FOLDER}`);
 		await CommandLine.execute('mackup backup -fv');
-		await this.__copyFileIfExists(`${HOME_FOLDER}/.p10k.zsh`, HOME_MACKUP_FOLDER);
 		if (fs.existsSync(`${HOME_FOLDER}/Dropbox/`)) {
 			console.log('Copying it to Dropbox');
 			await CommandLine.execute(`rm -rf ${DROPBOX_BACKUP_FOLDER}`);
@@ -68,7 +67,7 @@ class Backup {
 			await this.__copyFolder(HOME_MACKUP_FOLDER, DROPBOX_BACKUP_FOLDER);
 			console.log('Pushing a zipped version to Dropbox');
 			const zipFile = moment().format('YYYY-MM-DD_HH-mm-ss') + '.zip';
-			await CommandLine.execute(`zip -r ${DROPBOX_DOTFILES_FOLDER}/${zipFile} ${HOME_MACKUP_FOLDER}`);
+			await CommandLine.execute(`zip -r ${DROPBOX_DOTFILES_FOLDER}/${zipFile} ./Mackup`, { cwd: HOME_DOTFILES_FOLDER });
 			await this.__copyFile(`${DROPBOX_DOTFILES_FOLDER}/${zipFile}`, `${DROPBOX_DOTFILES_FOLDER}/last-backup.zip`);
 		} else console.log('Dropbox folder not found. Not pushing config backup.');
 	};

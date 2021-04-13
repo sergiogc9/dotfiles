@@ -22,7 +22,6 @@ class Apps {
 		await this.__installMultipleBrewPackages([
 			'mas',
 			'mackup',
-			'yarn',
 			'wget'
 		]);
 		await this.__installMultipleBrewCaskPackages([
@@ -93,7 +92,8 @@ class Apps {
 		console.log('Installing NPM packages');
 
 		const packages: string[] = [
-			'fox-awesome-cli'
+			'fox-awesome-cli',
+			'yarn'
 		];
 
 		for (const pkg of packages) {
