@@ -71,7 +71,8 @@ class Apps {
 			{ id: 'raindropio', name: 'Raindrop', type: 'brew-cask' },
 			{ id: '1431085284', name: 'Nimbus Note', type: 'app-store' },
 			{ id: 'firefox', name: 'Firefox', type: 'brew-cask' },
-			{ id: '1clipboard', name: '1Clipboard', type: 'brew-cask' }
+			{ id: '1clipboard', name: '1Clipboard', type: 'brew-cask' },
+			{ id: 'tunein', name: 'TuneIn', type: 'brew-cask' }
 		];
 
 		for (const app of apps) {
