@@ -31,13 +31,20 @@ class Apps {
 
 	private __installCommonApps = async () => {
 		console.log('Installing common apps');
+
 		// Brew
+		await this.__installMultipleBrewPackages([
+			'htop',
+			'raycast'
+		]);
+
+		// Brew cask
 		await this.__installMultipleBrewCaskPackages([
 			'google-chrome',
 			'dropbox',
 			'spectacle',
 			'visual-studio-code',
-			'alfred',
+			// 'alfred',
 			'istat-menus',
 			'iterm2',
 			'spotify',
