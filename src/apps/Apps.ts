@@ -48,7 +48,8 @@ class Apps {
 			'istat-menus',
 			'iterm2',
 			'spotify',
-			'vlc'
+			'vlc',
+			'iina'
 		]);
 
 		// AppStore
