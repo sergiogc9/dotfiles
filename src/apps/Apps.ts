@@ -80,7 +80,9 @@ class Apps {
 			{ id: '1431085284', name: 'Nimbus Note', type: 'app-store' },
 			{ id: 'firefox', name: 'Firefox', type: 'brew-cask' },
 			{ id: '1clipboard', name: '1Clipboard', type: 'brew-cask' },
-			{ id: 'tunein', name: 'TuneIn', type: 'brew-cask' }
+			{ id: 'tunein', name: 'TuneIn', type: 'brew-cask' },
+			{ id: 'beekeeper-studio', name: 'Beekeeper Studio', type: 'brew-cask' },
+			{ id: 'openvpn-connect', name: 'OpenVPN Connect', type: 'brew-cask' }
 		];
 
 		for (const app of apps) {
