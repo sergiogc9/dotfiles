@@ -12,7 +12,9 @@ A dotfiles init config for Mac OS by Sergio G Cosgaya using NodeJS and Typescrip
 ## Installation
 
 1. Clone the repository.
-2. Install the packages using the correct version of node (check *.nvmrc*):
+2. Download the 2 zip files (e.g. Dropbox) and override the fake ones.
+3. Make a fake sudo command (e.g. sudo ls -l) to be able to install brew, etc.
+4. Install the packages using the correct version of node (check *.nvmrc*):
     `yarn install`
 
 
