@@ -143,7 +143,7 @@ class Apps {
 
 	private __installMacOSApp = async (name: string, appId: string) => {
 		console.log(`Installing ${name}`);
-		await CommandLine.logAndExecute(`mas purchase ${appId}`);
+		await CommandLine.logAndExecute(`mas install ${appId}`);
 	};
 
 	private __installMultipleBrewPackages = async (packages: string[]) => {
