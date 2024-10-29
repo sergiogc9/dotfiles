@@ -83,7 +83,8 @@ class Apps {
 			{ id: 'tunein', name: 'TuneIn', type: 'brew-cask' },
 			{ id: 'beekeeper-studio', name: 'Beekeeper Studio', type: 'brew-cask' },
 			{ id: 'openvpn-connect', name: 'OpenVPN Connect', type: 'brew-cask' },
-			{ id: 'maccy', name: 'Maccy (copy & paste)', type: 'brew-cask' }
+			{ id: 'maccy', name: 'Maccy (copy & paste)', type: 'brew-cask' },
+			{ id: 'notion', name: 'Notion', type: 'brew-cask' }
 		];
 
 		for (const app of apps) {
