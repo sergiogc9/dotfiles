@@ -57,7 +57,8 @@ class Apps {
 			{ name: '1Password', appId: '1333542190' },
 			{ name: 'Spark', appId: '1176895641' },
 			{ name: 'The unarchiver', appId: '425424353' },
-			{ name: 'TickTick', appId: '966085870' }
+			{ name: 'TickTick', appId: '966085870' },
+			{ name: 'Maccy', appId: '1527619437' }
 		]);
 	};
 
@@ -83,7 +84,6 @@ class Apps {
 			{ id: 'tunein', name: 'TuneIn', type: 'brew-cask' },
 			{ id: 'beekeeper-studio', name: 'Beekeeper Studio', type: 'brew-cask' },
 			{ id: 'openvpn-connect', name: 'OpenVPN Connect', type: 'brew-cask' },
-			{ id: 'maccy', name: 'Maccy (copy & paste)', type: 'brew-cask' },
 			{ id: 'notion', name: 'Notion', type: 'brew-cask' }
 		];
 
