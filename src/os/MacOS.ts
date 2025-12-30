@@ -35,21 +35,22 @@ class MacOS {
 		// Search the current folder by default
 		await CommandLine.execute("defaults write com.apple.finder FXDefaultSearchScope -string 'SCcf'");
 
-		// Remove all apps from dock
-		if (!Config.get('already_executed')) await CommandLine.execute('defaults write com.apple.dock persistent-apps -array');
+		// Remove all apps from dock and put permanent apps in dock
+		if (!Config.get('already_executed')) {
+			await CommandLine.execute('brew install dockutil');
+			await CommandLine.executeFile(path.join(__dirname, '/scripts/set_dock_apps.sh'));
+		}
 
 		// Set bottom right hot corner to show/hide desktop
 		await CommandLine.execute('defaults write com.apple.dock wvous-br-corner -int 4');
 		await CommandLine.execute('defaults write com.apple.dock wvous-br-modifier -int 0');
 
-		// Update clock to show current date and current day of the week and 24h format
-		await CommandLine.execute("defaults write com.apple.menuextra.clock DateFormat 'EEE MMM d H:mm a'");
-
 		// Show Finder status bar
 		await CommandLine.execute('defaults write com.apple.finder ShowStatusBar -bool true');
 
 		// Show home folder in new Finder windows
-		await CommandLine.execute('defaults write com.apple.finder NewWindowTarget PfHm');
+		await CommandLine.execute(`defaults write com.apple.finder NewWindowTarget -string "PfLo"`);
+		await CommandLine.execute(`defaults write com.apple.finder NewWindowTargetPath -string "file:///Users/sergio/"`);
 
 		// Avoid creating .DS_Store files on network volumes
 		await CommandLine.execute('defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true');
@@ -61,10 +62,7 @@ class MacOS {
 		await CommandLine.execute('defaults write com.apple.screencapture location ~/Downloads');
 
 		// dark mode
-		await CommandLine.execute("defaults write 'Apple Global Domain' 'AppleInterfaceStyle' 'Dark'");
-
-		// stop itunes to autorun when a device is connected
-		await CommandLine.execute('defaults write com.apple.iTunesHelper ignore-devices 1');
+		await CommandLine.execute(`osascript -e 'tell application "System Events" to tell appearance preferences to set dark mode to true'`);
 
 		// Change dock icons size
 		await CommandLine.execute('defaults write com.apple.dock tilesize -int 40');
@@ -78,8 +76,9 @@ class MacOS {
 		// Disable natural trackpad scroll
 		await CommandLine.execute('defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false');
 
-		// Show battery percentage
-		await CommandLine.execute('defaults write com.apple.menuextra.battery ShowPercent YES');
+		// Set hot corners
+		await CommandLine.execute('defaults write com.apple.dock wvous-tr-corner -int 12');
+		await CommandLine.execute('defaults write com.apple.dock wvous-tl-corner -int 3');
 
 	}
 
