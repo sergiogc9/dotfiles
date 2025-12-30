@@ -16,7 +16,8 @@ class Terminal {
 
 	private __downloadNerdFonts = async () => {
 		// await CommandLine.execute('brew install --cask cask-fonts');
-		await CommandLine.execute('brew install --cask font-hack-nerd-font');
+		// await CommandLine.execute('brew install --cask font-hack-nerd-font');
+		await CommandLine.execute('brew install --cask font-meslo-lg-nerd-font');
 	};
 
 	private __installPrezto = async () => {
