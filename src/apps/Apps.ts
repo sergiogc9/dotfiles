@@ -42,13 +42,14 @@ class Apps {
 		await this.__installMultipleBrewCaskPackages([
 			'google-chrome',
 			'dropbox',
-			'spectacle',
+			// 'spectacle', Using rectangle now
 			'visual-studio-code',
 			// 'alfred',
 			'istat-menus',
 			'iterm2',
+			'warp',
 			'spotify',
-			'vlc',
+			// 'vlc', using iina
 			'iina'
 		]);
 
@@ -58,7 +59,7 @@ class Apps {
 			{ name: 'Spark', appId: '1176895641' },
 			{ name: 'Calendars', appId: '608834326' },
 			{ name: 'The unarchiver', appId: '425424353' },
-			{ name: 'TickTick', appId: '966085870' },
+			// { name: 'TickTick', appId: '966085870' },
 			{ name: 'Maccy', appId: '1527619437' }
 		]);
 	};
@@ -68,7 +69,7 @@ class Apps {
 
 		const apps: { id: string, name: string, type: 'brew' | 'brew-cask' | 'app-store' }[] = [
 			{ id: 'microsoft-office', name: 'Microsoft Office', type: 'brew-cask' },
-			{ id: 'tunnelblick', name: 'Tunnelblick', type: 'brew-cask' },
+			// { id: 'tunnelblick', name: 'Tunnelblick', type: 'brew-cask' }, sing OpenVPN client
 			{ id: '1153157709', name: 'Speedtest by Ookla', type: 'app-store' },
 			{ id: 'tripmode', name: 'Tripmode', type: 'brew-cask' },
 			{ id: '1147396723', name: 'Whatsapp Desktop', type: 'app-store' },
@@ -78,15 +79,25 @@ class Apps {
 			{ id: 'mongodb-compass', name: 'MongoDB Compass', type: 'brew-cask' },
 			{ id: 'postman', name: 'Postman', type: 'brew-cask' },
 			{ id: 'nucleo', name: 'Nucleo', type: 'brew-cask' },
-			// { id: 'raindropio', name: 'Raindrop', type: 'brew-cask' },
-			{ id: '1431085284', name: 'Nimbus Note', type: 'app-store' },
+			{ id: 'raindropio', name: 'Raindrop', type: 'brew-cask' },
+			// { id: '1431085284', name: 'Nimbus Note', type: 'app-store' },
 			{ id: 'firefox', name: 'Firefox', type: 'brew-cask' },
 			// { id: '1clipboard', name: '1Clipboard', type: 'brew-cask' },
 			{ id: 'tunein', name: 'TuneIn', type: 'brew-cask' },
 			{ id: 'beekeeper-studio', name: 'Beekeeper Studio', type: 'brew-cask' },
 			{ id: 'openvpn-connect', name: 'OpenVPN Connect', type: 'brew-cask' },
 			{ id: 'notion', name: 'Notion', type: 'brew-cask' },
-			{ id: '569541907', name: 'Radio FM', type: 'app-store' }
+			{ id: '569541907', name: 'Radio FM', type: 'app-store' },
+			{ id: 'chatgpt', name: 'ChatGPT', type: 'brew-cask' },
+			{ id: 'cursor', name: 'Cursor', type: 'brew-cask' },
+			{ id: 'docker', name: 'Docker', type: 'brew' },
+			{ id: 'discord', name: 'Discord', type: 'brew-cask' },
+			{ id: 'excalidrawz', name: 'ExcalidrawZ', type: 'brew-cask' },
+			{ id: 'figma', name: 'Figma', type: 'brew-cask' },
+			{ id: '288545208', name: 'Instapaper', type: 'app-store' },
+			{ id: 'slack', name: 'Slack', type: 'brew-cask' },
+			{ id: 'microsoft-teams', name: 'Microsoft Teams', type: 'brew-cask' },
+			{ id: 'utm', name: 'UTM (Virtual Machines)', type: 'brew-cask' }
 		];
 
 		for (const app of apps) {
