@@ -35,7 +35,8 @@ class Apps {
 		// Brew
 		await this.__installMultipleBrewPackages([
 			'htop',
-			'raycast'
+			'raycast',
+			'mole'
 		]);
 
 		// Brew cask
@@ -158,6 +159,8 @@ class Apps {
 
 	private __installMacOSApp = async (name: string, appId: string) => {
 		console.log(`Installing ${name}`);
+		console.log("NOT WORKING IN VM");
+		return
 		await CommandLine.logAndExecute(`mas install ${appId}`);
 	};
 
