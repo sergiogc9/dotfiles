@@ -50,7 +50,7 @@ class Backup {
 
 	private __getConfigDropboxUrl = async () => {
 		if (!fs.existsSync(path.join(__dirname, '/files/config_dropbox_url.txt'))) {
-			const { pwd } = await inquirer.prompt([{ type: 'password', name: 'pwd', message: 'Enter the password to download the config from Facebook' }]);
+			const { pwd } = await inquirer.prompt([{ type: 'password', name: 'pwd', message: 'Enter the password to download the config from Dropbox' }]);
 			await CommandLine.execute(`unzip -P ${pwd} config_dropbox_url.zip`, { cwd: path.join(__dirname, '/files/') });
 		}
 		const url = await fsPromise.readFile(path.join(__dirname, '/files/config_dropbox_url.txt'), 'utf8');
