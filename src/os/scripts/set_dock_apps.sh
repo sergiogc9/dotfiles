@@ -16,7 +16,7 @@ dockutil --add "/Applications/Safari.app" --no-restart
 dockutil --add '' --type small-spacer --section apps --no-restart
 
 dockutil --add "/Applications/Notion.app" --no-restart
-dockutil --add "/Applications/Raindrop.app" --no-restart
+dockutil --add "/Applications/Raindrop.io.app" --no-restart
 
 dockutil --add '' --type small-spacer --section apps --no-restart
 
@@ -26,7 +26,6 @@ dockutil --add "/Applications/Warp.app" --no-restart
 dockutil --add "/Applications/iTerm.app" --no-restart
 dockutil --add "/Applications/Warp.app" --no-restart
 dockutil --add "/Applications/Termius.app" --no-restart
-dockutil --add "/Applications/Beekeeper Studio.app" --no-restart
 
 dockutil --add '' --type small-spacer --section apps --no-restart
 
