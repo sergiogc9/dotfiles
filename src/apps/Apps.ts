@@ -43,6 +43,7 @@ class Apps {
 		await this.__installMultipleBrewCaskPackages([
 			'google-chrome',
 			'dropbox',
+			'1password',
 			// 'spectacle', Using rectangle now
 			'visual-studio-code',
 			// 'alfred',
@@ -56,7 +57,6 @@ class Apps {
 
 		// AppStore
 		await this.__installMultipleMacOSApps([
-			{ name: '1Password', appId: '1333542190' },
 			{ name: 'Spark', appId: '1176895641' },
 			{ name: 'Calendars', appId: '608834326' },
 			{ name: 'The unarchiver', appId: '425424353' },
