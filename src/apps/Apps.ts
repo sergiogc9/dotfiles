@@ -158,9 +158,6 @@ class Apps {
 	};
 
 	private __installMacOSApp = async (name: string, appId: string) => {
-		console.log(`Installing ${name}`);
-		console.log("NOT WORKING IN VM");
-		return
 		await CommandLine.logAndExecute(`mas install ${appId}`);
 	};
 
