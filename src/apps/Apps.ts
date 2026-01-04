@@ -45,6 +45,7 @@ class Apps {
 			'dropbox',
 			'1password',
 			// 'spectacle', Using rectangle now
+			'rectangle',
 			'visual-studio-code',
 			// 'alfred',
 			'istat-menus',
