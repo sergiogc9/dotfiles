@@ -73,7 +73,7 @@ class Apps {
 			// { id: 'tunnelblick', name: 'Tunnelblick', type: 'brew-cask' }, sing OpenVPN client
 			{ id: '1153157709', name: 'Speedtest by Ookla', type: 'app-store' },
 			{ id: 'tripmode', name: 'Tripmode', type: 'brew-cask' },
-			{ id: '1147396723', name: 'Whatsapp Desktop', type: 'app-store' },
+			{ id: '310633997', name: 'Whatsapp', type: 'app-store' },
 			{ id: '1176074088', name: 'Termius', type: 'app-store' },
 			{ id: 'cyberduck', name: 'Cyberduck', type: 'brew-cask' },
 			{ id: 'sourcetree', name: 'Sourcetree', type: 'brew-cask' },
