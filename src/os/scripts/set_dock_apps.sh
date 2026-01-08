@@ -16,6 +16,7 @@ dockutil --add "/Applications/Safari.app" --no-restart
 dockutil --add '' --type small-spacer --section apps --no-restart
 
 dockutil --add "/Applications/Notion.app" --no-restart
+dockutil --add "/Applications/ChatGPT.app" --no-restart
 dockutil --add "/Applications/Raindrop.io.app" --no-restart
 
 dockutil --add '' --type small-spacer --section apps --no-restart
