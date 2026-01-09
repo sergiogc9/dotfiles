@@ -92,7 +92,6 @@ class Apps {
 			{ id: '569541907', name: 'Radio FM', type: 'app-store' },
 			{ id: 'chatgpt', name: 'ChatGPT', type: 'brew-cask' },
 			{ id: 'cursor', name: 'Cursor', type: 'brew-cask' },
-			{ id: 'docker', name: 'Docker', type: 'brew' },
 			{ id: 'discord', name: 'Discord', type: 'brew-cask' },
 			{ id: 'excalidrawz', name: 'ExcalidrawZ', type: 'brew-cask' },
 			{ id: 'figma', name: 'Figma', type: 'brew-cask' },
