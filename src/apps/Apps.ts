@@ -121,6 +121,7 @@ class Apps {
 
 		const packages: string[] = [
 			'fox-awesome-cli',
+			'pnpm',
 			'yarn'
 		];
 
