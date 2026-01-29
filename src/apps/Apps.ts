@@ -100,7 +100,8 @@ class Apps {
 			{ id: 'slack', name: 'Slack', type: 'brew-cask' },
 			{ id: 'microsoft-teams', name: 'Microsoft Teams', type: 'brew-cask' },
 			{ id: 'utm', name: 'UTM (Virtual Machines)', type: 'brew-cask' },
-			{ id: 'redis-insight', name: 'Redis Insight', type: 'brew-cask' }
+			{ id: 'redis-insight', name: 'Redis Insight', type: 'brew-cask' },
+			{ id: 'claude-code', name: 'Claude code', type: 'brew-cask' }
 		];
 
 		for (const app of apps) {
