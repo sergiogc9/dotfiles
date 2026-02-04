@@ -25,6 +25,7 @@ dockutil --add '' --type small-spacer --section apps --no-restart
 
 dockutil --add "/Applications/Sourcetree.app" --no-restart
 dockutil --add "/Applications/Visual Studio Code.app" --no-restart
+dockutil --add "/Applications/Beekeeper Studio.app" --no-restart
 dockutil --add "/Applications/Warp.app" --no-restart
 dockutil --add "/Applications/iTerm.app" --no-restart
 dockutil --add "/Applications/Warp.app" --no-restart
