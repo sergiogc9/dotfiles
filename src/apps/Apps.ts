@@ -96,7 +96,7 @@ class Apps {
 			{ id: 'excalidrawz', name: 'ExcalidrawZ', type: 'brew-cask' },
 			{ id: 'figma', name: 'Figma', type: 'brew-cask' },
 			{ id: 'miro', name: 'Miro', type: 'brew-cask' },
-			{ id: '288545208', name: 'Instapaper', type: 'app-store' },
+			// { id: '288545208', name: 'Instapaper', type: 'app-store' },
 			{ id: 'slack', name: 'Slack', type: 'brew-cask' },
 			{ id: 'microsoft-teams', name: 'Microsoft Teams', type: 'brew-cask' },
 			{ id: 'utm', name: 'UTM (Virtual Machines)', type: 'brew-cask' },
