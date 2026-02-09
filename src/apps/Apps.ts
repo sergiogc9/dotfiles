@@ -102,7 +102,8 @@ class Apps {
 			{ id: 'utm', name: 'UTM (Virtual Machines)', type: 'brew-cask' },
 			{ id: 'redis-insight', name: 'Redis Insight', type: 'brew-cask' },
 			{ id: 'claude', name: 'Claude', type: 'brew-cask' },
-			{ id: 'claude-code', name: 'Claude code', type: 'brew-cask' }
+			{ id: 'claude-code', name: 'Claude code', type: 'brew-cask' },
+			{ id: '1487937127', name: 'Craft', type: 'app-store' }
 		];
 
 		for (const app of apps) {
