@@ -6,6 +6,7 @@ dockutil --remove all --no-restart
 dockutil --add "/Applications/Spark.app" --no-restart
 dockutil --add "/Applications/Calendars.app" --no-restart
 dockutil --add "/Applications/Slack.app" --no-restart
+dockutil --add "/Applications/Craft.app" --no-restart
 dockutil --add "/Applications/Microsoft Teams.app" --no-restart
 
 dockutil --add '' --type small-spacer --section apps --no-restart
