@@ -3,7 +3,7 @@
 # Remove all existing Dock items
 dockutil --remove all --no-restart
 
-dockutil --add "/Applications/Spark.app" --no-restart
+dockutil --add "/Applications/Spark Desktop.app" --no-restart
 dockutil --add "/Applications/Calendars.app" --no-restart
 dockutil --add "/Applications/Slack.app" --no-restart
 dockutil --add "/Applications/Craft.app" --no-restart

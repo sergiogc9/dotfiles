@@ -58,7 +58,7 @@ class Apps {
 
 		// AppStore
 		await this.__installMultipleMacOSApps([
-			{ name: 'Spark', appId: '1176895641' },
+			{ name: 'Spark Desktop', appId: '6445813049' },
 			{ name: 'Calendars', appId: '608834326' },
 			{ name: 'The unarchiver', appId: '425424353' },
 			// { name: 'TickTick', appId: '966085870' },
